@@ -1,0 +1,9 @@
+{
+  "original_prompt": "make ppt on sales report",
+  "document_text": "Revenue increased by 20% and profit increased by 12%.",
+  "requirements": {
+    "task": "presentation",
+    "slides": 8,
+    "tone": "professional"
+  }
+}
