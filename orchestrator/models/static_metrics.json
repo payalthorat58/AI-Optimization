@@ -1,0 +1,26 @@
+[
+    {
+        "name": "granite4.1:3b",
+        "provider": "ollama",
+        "max_context": 128000,
+        "supports_privacy": true,
+        "supports_compliance": true,
+        "reasoning_level": "medium"
+    },
+    {
+        "name": "gemini-2.5-flash",
+        "provider": "google",
+        "max_context": 1000000,
+        "supports_privacy": false,
+        "supports_compliance": true,
+        "reasoning_level": "high"
+    },
+    {
+        "name": "llama-3.3-70b",
+        "provider": "groq",
+        "max_context": 128000,
+        "supports_privacy": false,
+        "supports_compliance": false,
+        "reasoning_level": "very_high"
+    }
+]

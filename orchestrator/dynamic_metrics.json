@@ -1,0 +1,17 @@
+{
+    "estimated_input_tokens": 100,
+    "estimated_output_tokens": 800,
+    "estimated_cost": {
+        "granite4.1:3b": 2,
+        "gemini-2.5-flash": 2,
+        "llama-3.3-70b": 2
+    },
+    "estimated_latency": {
+        "granite4.1:3b": 0.8,
+        "gemini-2.5-flash": 0.7,
+        "llama-3.3-70b": 1.0
+    },
+    "task_complexity": "low",
+    "task_style": "deterministic",
+    "temperature": 0.2
+}

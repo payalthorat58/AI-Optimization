@@ -6,6 +6,7 @@ with open("input.json", "r") as f:
     data = json.load(f)
 
 original_prompt = data["original_prompt"]
+document_text = data["document_text"]
 requirements = data["requirements"]
 
 # Create prompt for Granite
@@ -36,5 +37,14 @@ response = ollama.chat(
 
 optimized_prompt = response["message"]["content"]
 
-print("Optimized Prompt:\n")
-print(optimized_prompt)
+# Save everything for the next stage
+output = {
+    "optimized_prompt": optimized_prompt,
+    "document_text": document_text,
+    "requirements": requirements
+}
+
+with open("optimized_prompt.json", "w") as f:
+    json.dump(output, f, indent=4)
+
+print("Optimized prompt saved to optimized_prompt.json")

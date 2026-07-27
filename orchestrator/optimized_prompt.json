@@ -1,0 +1,9 @@
+{
+    "optimized_prompt": "Create a professional presentation consisting of 8 slides that provides an in-depth analysis and summary of the recent sales report.",
+    "document_text": "Revenue increased by 20% and profit increased by 12%.",
+    "requirements": {
+        "task": "presentation",
+        "slides": 8,
+        "tone": "professional"
+    }
+}
