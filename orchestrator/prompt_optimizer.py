@@ -8,20 +8,28 @@ with open("input.json", "r") as f:
 original_prompt = data["original_prompt"]
 document_text = data["document_text"]
 requirements = data["requirements"]
+metadata = data["metadata"]
 
-# Create prompt for Granite
+# Prompt for Granite
 optimizer_prompt = f"""
 You are an expert prompt engineer.
 
-Improve the user's prompt while preserving its intent.
+Improve the user's prompt while preserving its original intent.
 
 Requirements:
 {json.dumps(requirements, indent=2)}
 
+Document:
+{document_text}
+
 Original Prompt:
 {original_prompt}
 
-Return ONLY the improved prompt.
+Rules:
+- Preserve the user's intent.
+- Include relevant document context if needed.
+- Make the prompt clear, precise and complete.
+- Return ONLY the optimized prompt.
 """
 
 # Call Granite
@@ -35,13 +43,14 @@ response = ollama.chat(
     ]
 )
 
-optimized_prompt = response["message"]["content"]
+optimized_prompt = response["message"]["content"].strip()
 
-# Save everything for the next stage
+# Save everything for downstream agents
 output = {
     "optimized_prompt": optimized_prompt,
     "document_text": document_text,
-    "requirements": requirements
+    "requirements": requirements,
+    "metadata": metadata
 }
 
 with open("optimized_prompt.json", "w") as f:

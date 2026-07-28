@@ -1,9 +1,27 @@
 {
-  "original_prompt": "make ppt on sales report",
-  "document_text": "Revenue increased by 20% and profit increased by 12%.",
-  "requirements": {
-    "task": "presentation",
-    "slides": 8,
-    "tone": "professional"
-  }
+    "original_prompt": "Create a professional PowerPoint presentation on AI in Healthcare.",
+
+    "document_text": "Artificial Intelligence is transforming healthcare through disease prediction, medical imaging, robotic surgery, personalized treatment, hospital automation, and drug discovery. Challenges include data privacy, regulatory compliance, ethical concerns, and model bias.",
+
+    "requirements": {
+        "task": "presentation",
+        "slides": 8,
+        "tone": "professional",
+        "output_format": "pptx"
+    },
+
+    "metadata": {
+        "file_count": 1,
+        "total_characters": 276,
+        "pages": 2,
+        "tables": 1,
+        "document_elements": 6,
+
+        "documents": [
+            {
+                "filename": "AI_Healthcare_Report.pdf",
+                "type": "pdf"
+            }
+        ]
+    }
 }

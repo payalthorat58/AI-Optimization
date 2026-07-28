@@ -1,17 +1,41 @@
 {
-    "estimated_input_tokens": 100,
-    "estimated_output_tokens": 800,
+    "task": "presentation",
+    "optimized_prompt": "Create an 8-slide, professionally-toned PowerPoint (PPTX) presentation titled \"Artificial Intelligence Transforming Healthcare,\" covering key areas such as disease prediction, medical imaging, robotic surgery, personalized treatment, hospital automation, and drug discovery. Address the challenges of data privacy, regulatory compliance, ethical concerns, and model bias, ensuring all relevant context from the document is included to maintain a comprehensive and precise overview of AI's impact on healthcare.",
+    "document_text": "Artificial Intelligence is transforming healthcare through disease prediction, medical imaging, robotic surgery, personalized treatment, hospital automation, and drug discovery. Challenges include data privacy, regulatory compliance, ethical concerns, and model bias.",
+    "requirements": {
+        "task": "presentation",
+        "slides": 8,
+        "tone": "professional",
+        "output_format": "pptx"
+    },
+    "metadata": {
+        "file_count": 1,
+        "total_characters": 276,
+        "pages": 2,
+        "tables": 1,
+        "document_elements": 6,
+        "documents": [
+            {
+                "filename": "AI_Healthcare_Report.pdf",
+                "type": "pdf"
+            }
+        ]
+    },
+    "estimated_input_tokens": 0,
+    "estimated_output_tokens": 0,
     "estimated_cost": {
-        "granite4.1:3b": 2,
-        "gemini-2.5-flash": 2,
-        "llama-3.3-70b": 2
+        "granite4.1:3b": 1,
+        "granite3.1-moe:3b": 1,
+        "presenton": 2,
+        "black-forest-labs/FLUX.1-dev": 3
     },
     "estimated_latency": {
-        "granite4.1:3b": 0.8,
-        "gemini-2.5-flash": 0.7,
-        "llama-3.3-70b": 1.0
+        "granite4.1:3b": 0.5,
+        "granite3.1-moe:3b": 0.6,
+        "presenton": 0.7,
+        "black-forest-labs/FLUX.1-dev": 0.9
     },
-    "task_complexity": "low",
-    "task_style": "deterministic",
-    "temperature": 0.2
+    "task_complexity": "medium",
+    "task_style": "balanced",
+    "temperature": 0.5
 }
